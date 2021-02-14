@@ -1,0 +1,95 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2021-02-12T12:22:11Z"
+  generation: 1
+  labels:
+    app: forex-conversion
+  name: forex-conversion
+  namespace: default
+  resourceVersion: "1819"
+  selfLink: /apis/apps/v1/namespaces/default/deployments/forex-conversion
+  uid: 643e5c46-8497-4e09-909d-cccb6e4390f2
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: forex-conversion
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: forex-conversion
+    spec:
+      containers:
+      - image: purvender/mmv1-forex-conversion-service-kubernetes:0.0.11-SNAPSHOT
+        imagePullPolicy: IfNotPresent
+        name: mmv1-forex-conversion-service-kubernetes
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2021-02-12T12:22:15Z"
+    lastUpdateTime: "2021-02-12T12:22:15Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2021-02-12T12:22:11Z"
+    lastUpdateTime: "2021-02-12T12:22:15Z"
+    message: ReplicaSet "forex-conversion-57f6cff57c" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    cloud.google.com/neg: '{"ingress":true}'
+  creationTimestamp: "2021-02-12T12:22:22Z"
+  finalizers:
+  - service.kubernetes.io/load-balancer-cleanup
+  labels:
+    app: forex-conversion
+  name: forex-conversion
+  namespace: default
+  resourceVersion: "2115"
+  selfLink: /api/v1/namespaces/default/services/forex-conversion
+  uid: af0ddec2-e754-47ff-a7f2-2fe19137cd66
+spec:
+  clusterIP: 10.32.8.57
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 32193
+    port: 8100
+    protocol: TCP
+    targetPort: 8100
+  selector:
+    app: forex-conversion
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 34.123.108.247
