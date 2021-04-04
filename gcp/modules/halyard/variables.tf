@@ -1,3 +1,0 @@
-variable "zone" {
-  type = string
-}
