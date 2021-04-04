@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    cloud.google.com/neg: '{"ingress":true}'
+  labels:
+    app: forex-conversion
+  name: forex-conversion
+spec:
+  ports:
+  - port: 8100
+    protocol: TCP
+    targetPort: 8100
+  selector:
+    role: backend
+    app: forex-conversion
+  sessionAffinity: None
+  type: LoadBalancer
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  data:
+    FOREX_EXCHANGE_URI: http://forex-exchange
+  kind: ConfigMap
+  metadata:
+    name: forex-conversion
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

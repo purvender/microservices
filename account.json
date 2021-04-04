@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "angular-amp-304510",
+  "private_key_id": "907890672e1c54071ba40600df3df8290e89a567",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDKubZ9oUF5DdzH\ne9PYFpG3JOcBCvaHIFZ486TBCRaWFgy5y3u4ayQ/+sIhLOC5jQ0w5q54kmhWPS0J\nwpBN/Dsc5JXL18Bp0ayryPNoTfTkOx3Mt7C32JtCFe0ST76USJekzJX2nYd8ua9J\npng2K2iULagzQxQr+Bmp+v3vKpkreb0gVE0a77Xfa+E5VXGWuEtlGXMmuVMWHb/C\nyanULVNFkDu9lChbpIUpISZRMarzxcN6oygnYhu1ZklEl35/Zt/vKveTtdd9Afx+\n+eCrBcAcGAj2JB5NwU1Ef8AxmHqo+fODJLaZVxLXtFjA3XciBuIUxxbMkH1cFmRt\nuP6A4UCnAgMBAAECggEALL0FT/5JU6zCf2eNXc/FQpSrQiioNTPmwXSLdGpMCL0+\n+7WzTQSgEFqHgwjDY0+EjLkr4cH1sqp3iQLeE8fJR9wOTtkDRpcWMyb6yJcDp2aA\nchBLuJbd1JzAH91nYpQOmzjnE3C6WMUlsOxC9TlpL+JPj1iLWBS9nSyd460T9mrX\nTctZJd8LzYMvpOlNn+ZEED779lsVygefKmPFSUj47qAT9n2QzP++Ki8/YsWNYkTw\nZ2/y67H7jduxWC/oAlFFBzrnFoIITzp38Yk40o1X4tZ8cJjXlMSYLprbTNWt5ACc\ng1AnpNxOIUxqpirYsQW9qsSZDTSyFvg4hgPGsZ7agQKBgQD7iVVhkZF3pv42mQvy\nr+9lOBu0+b6FsNq6V0F1C5ZXVLbeAbnSdHGloROUqkWmZGNsYTIUgiHfW2qUpwE9\nkAI2leqORuitE44za84lnbs6EITAddNCpkzsuEM5nzr5gCczO9jtdBP+HS/HyU2g\nHZMubY4oUec9RaL20lmdgvWI5wKBgQDOUqSqxGU0fjiUlmS+p4+joZCUyUphZ1xh\n3mQDxTRWGIPvFDQfzQcrCtnoxdPsxiStk5prG/N7j+3y4zKrBul6jsvd3f7D55a9\nllhYzSRjqv7ld2PP2tpwLHWOzs/xLD+Lw098YQBnafQ0B6kQvZJ4b8M1tXLMgqpO\n5IXURGTSQQKBgDTmeh1t9vD6Huauo1Oj6q4X8cPK7mXBfw7HgQ2zpSeyuk7QgBsh\nwDD8Qlj2wnUvEbXebyDfCW6nFDA1O06ONdjzCIRpp0+XGEX6Oz2wAYtBpBmx7f9L\naEw0qHa65TVJ3XSp9oJh8j50NvNGg9vTvHt8MPSL3R0GwzIzpQM6YpcrAoGBAMPP\nn0QKfFpjaGNskFR5RlNvpH3ww8zJgd3IaHdDk7YaMiyWqhl8Rk9NTx4hkk3mhyzN\nJwJ8VopwQM4BXjb+qluMZmM8qutWQbPQmiw9FUoaISu6MVo1RJatOyy7jpI/Algs\nlqVekjmTTxaKJqQipn3y4/t3J2p8oBGbxH9+IYmBAoGABY1I6LCsUDfT4D632nR3\nFczNHs7tu96dj+3+CkfYVzCFV0XEDDb2nmFtLNX4kzurKKB/ZoYYjfKFwVMY24Ww\nRC9OLpuWxSk36GXPVXQgflx/fBmopjndTe1aq5miqOVOKzuzAuWBQAqZyqZsufCA\nik0cMf5GKcS/Uoe2K5idKJg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "spinnaker-gcs-account@angular-amp-304510.iam.gserviceaccount.com",
+  "client_id": "114836533217276853329",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/spinnaker-gcs-account%40angular-amp-304510.iam.gserviceaccount.com"
+}
