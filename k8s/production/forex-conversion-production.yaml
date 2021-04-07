@@ -5,7 +5,7 @@ metadata:
     deployment.kubernetes.io/revision: "1"
   labels:
     app: forex-conversion
-  name: forex-conversion-canary
+  name: forex-conversion-production
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -13,7 +13,7 @@ spec:
     matchLabels:
       app: forex-conversion
       role: frontend
-      env: canary
+      env: production
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -24,7 +24,7 @@ spec:
       labels:
         app: forex-conversion
         role: frontend
-        env: canary
+        env: production
     spec:
       containers:
       - image: purvender/mmv1-forex-conversion-service-kubernetes:0.0.11-SNAPSHOT
