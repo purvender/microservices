@@ -4,28 +4,15 @@ metadata:
   annotations:
     cloud.google.com/neg: '{"ingress":true}'
   labels:
-    app: forex-conversion
-  name: forex-conversion
+    app: forex-exchange
+  name: forex-exchange
 spec:
   ports:
-  - port: 8100
+  - port: 8000
     protocol: TCP
-    targetPort: 8100
+    targetPort: 8000
   selector:
-    role: backend
-    app: forex-conversion
+    role: frontend
+    app: forex-exchange
   sessionAffinity: None
   type: LoadBalancer
----
-apiVersion: v1
-items:
-- apiVersion: v1
-  data:
-    FOREX_EXCHANGE_URI: http://forex-exchange
-  kind: ConfigMap
-  metadata:
-    name: forex-conversion
-kind: List
-metadata:
-  resourceVersion: ""
-  selfLink: ""

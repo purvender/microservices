@@ -12,7 +12,7 @@ spec:
   selector:
     matchLabels:
       app: forex-conversion
-      role: backend
+      role: frontend
       env: canary
   strategy:
     rollingUpdate:
@@ -23,13 +23,13 @@ spec:
     metadata:
       labels:
         app: forex-conversion
-        role: backend
+        role: frontend
         env: canary
     spec:
       containers:
       - image: purvender/mmv1-forex-conversion-service-kubernetes:0.0.11-SNAPSHOT
         imagePullPolicy: IfNotPresent
-        name: backend
+        name: frontend
         readinessProbe:
           httpGet:
             port: 8100
@@ -45,34 +45,3 @@ spec:
           - configMapRef:
               name: forex-conversion
       restartPolicy: Always
----
-apiVersion: v1
-kind: Service
-metadata:
-  annotations:
-    cloud.google.com/neg: '{"ingress":true}'
-  labels:
-    app: forex-conversion
-  name: forex-conversion
-spec:
-  ports:
-  - port: 8100
-    protocol: TCP
-    targetPort: 8100
-  selector:
-    app: forex-conversion
-  sessionAffinity: None
-  type: LoadBalancer
----
-apiVersion: v1
-items:
-- apiVersion: v1
-  data:
-    FOREX_EXCHANGE_URI: http://forex-exchange
-  kind: ConfigMap
-  metadata:
-    name: forex-conversion
-kind: List
-metadata:
-  resourceVersion: ""
-  selfLink: ""
